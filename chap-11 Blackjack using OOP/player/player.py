@@ -17,12 +17,17 @@ class Player:
 
     def player_betting_amount_for_the_round(self,amount):
         value = self.player_account.withdraw_amt(amount)
-        if value == 'Funds Unavailable':
-            return False
+        if value == '\nFunds Unavailable':
+            return 0
         else:
-            return True
+            return amount
 
     def __str__(self):
-        return f"player - {self.name} has outstanding balance of {self.player_account.balance}"
+        return f"\nplayer - {self.name} has outstanding balance of {self.player_account.balance}"
+
+    def get_player_hand(self):
+        print(f"\nplayer - {self.name} has ")
+        for index in range(0,len(self.hand)):
+            print(str(self.hand[index]))
 
 

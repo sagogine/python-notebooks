@@ -15,18 +15,18 @@ class Player_Account:
         Method to update the player's balance with the winnings from the hand
         '''
         self.balance += balance
-        return 'Amount added to players pot !'
+        return '\nAmount added to players pot !'
 
     def withdraw_amt(self,amount):
         '''
         Method to update the player's balance after the putting the pot for next hand
         '''
         if self.balance<amount:
-            return 'Funds Unavailable'
+            return '\nFunds Unavailable'
         else:
             self.balance -= amount
-            return 'Money added to hand !'
+            return '\nMoney added to hand !'
 
     def __str__(self):
-        return f"Account owner : {self.owner} has outstanding balance of {self.balance}"
+        return f"\nAccount owner : {self.owner} has outstanding balance of {self.balance}"
         

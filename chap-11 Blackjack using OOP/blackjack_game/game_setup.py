@@ -22,14 +22,14 @@ class Game_Setup:
 
     def get_player_name(self):
         while True:
-            name = input('Input yout name : ')
+            name = input('\nInput yout name : ')
             if(name != ''):
                 break
         return name
 
     def get_player_initial_balance(self):
         while True:
-            amount = int(input('How much money you want to beging the game with : '))
+            amount = int(input('\nHow much money you want to beging the game with : '))
             if amount>0:
                 break
         return amount

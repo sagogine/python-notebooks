@@ -17,3 +17,9 @@ class Deck:
 
     def deal_one(self):
         return self.deck_of_cards.pop()
+
+    def remove_multiple_cards(self):
+        player_card_list = []
+        for i in range(0,2):
+            player_card_list.append(self.deal_one())
+        return player_card_list
